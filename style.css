@@ -153,6 +153,7 @@ body{
 }
 .samesidebar ul li a{
 	text-decoration: none;
+	font-size: 20px;
 }
 .samesidebar ul li a:hover{
 	color: red;
