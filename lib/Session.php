@@ -18,6 +18,18 @@ class Session{
 		}
 	}
 
+	public static function checkSession(){
+		if(self::get("login") == false){
+			self::destroy();
+		}
+	}
+
+	public static function checkLogin(){
+		if(self::get("login") == true){
+			header("Location: index.php");
+		}
+	}
+
 	public static function destroy(){
 		session_destroy();
 		session_unset();
