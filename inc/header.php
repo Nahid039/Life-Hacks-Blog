@@ -42,20 +42,26 @@
 			<a href="#"><img src="img/instalogo.jpg"></a>
 			<a href="#"><img src="img/fblogo.png"></a>
 		</div>
+		<div class="searchbtn clear">
+			<form action="" method="post">
+				<input type="text" name="keyword" placeholder="Search keyword..."/>
+				<input type="submit" name="submit" value="Search"/>
+			</form>
+		</div>
 		
 	</div>
 
 	<div class="navsection clear">
 		<ul>
 			<li><a href="index.php">Home</a></li>
-			<li><a href="">Contact</a></li>
+			<li><a href="contact.php">Contact</a></li>
 			<li><a href="">Services</a>
-				<ul>
+				<!-- <ul>
 					<li><a class="dropdown-item" href="">Service one</a></li>
 					<li><a class="dropdown-item" href="">Service two</a></li>
 					<li><a class="dropdown-item" href="">Service three</a></li>
 					<li><a class="dropdown-item" href="">Service four</a></li>
-				</ul>
+				</ul> -->
 			</li>
 			<?php
 				$id = Session::get('id');

@@ -9,7 +9,7 @@
       $user->userLogin($_POST);
   }
 ?>
-
+<<div class="contentsection clear">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h2>User Login</h2>
@@ -32,8 +32,4 @@
         </form>
     </div>
   </div>
-</body>
-
-<!-- <?php
-  include "inc/footer.php";
-?> -->
+</div>

@@ -1,8 +1,11 @@
 <?php
 include 'inc/header.php';
 include "lib/User.php";
+include "helpers/Format.php";
 
-	$user = new User();
+$user = new User();
+$fm = new Format();
+
 ?>
 
 	<div class="slidesection clear">
@@ -12,26 +15,22 @@ include "lib/User.php";
 	</div>
 	<div class="contentsection clear">
 		<div class="maincontent clear">
+			<?php
+			$i=0;
+				foreach ($user->select() as $result) {
+	        		$i++;
+	        ?>
 			<div class="samepost clear">
-				<h2>Life is Strange</h2>
+				<h2><?php echo $result['title']; ?></h2>
+				<p><?php echo $result['date']; ?><a href=""><?php echo ", Posted by ".$result['author']; ?></a></p>
 				<img src="img/image_1.jpg">
-				<p>
-					Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.
-				</p>
+				<p><?php echo $fm->textShorten($result['body']); ?></p>
 				<div class="readmore">
-					<a href="#">Read More</a>
+					<a href="post.php?id=<?php echo $result['id']; ?>">Read More</a>
 				</div>
 			</div>
-			<div class="samepost clear">
-				<h2>Love is not enough</h2>
-				<img src="img/image_1.jpg">
-				<p>
-					Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.Some text will go here.
-				</p>
-				<div class="readmore">
-					<a href="#">Read More</a>
-				</div>
-			</div>
+
+		<?php } ?>
 		</div>
 
 		<div class="sidebar clear">

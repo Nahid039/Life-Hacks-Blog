@@ -8,6 +8,14 @@ class User{
 		$this->db = new Database();
 	}
 
+
+	public function select(){
+		$query = "SELECT * FROM tbl_post";
+		$stmt = $this->db->pdo->prepare($query);
+		$stmt->execute();
+		return $stmt->fetchAll();
+	}
+
 	public function userRegistration($data){
 		$name = $data['name'];
 		$username = $data['username'];
@@ -45,6 +53,15 @@ class User{
 		$stmt->execute();
 		return $stmt->fetch();
 	}
+
+	public function postById($id){
+		$sql = "SELECT * FROM tbl_post WHERE id=:id";
+		$stmt =$this->db->pdo->prepare($sql);
+		$stmt->bindValue(':id',$id);
+		$stmt->execute();
+		return $stmt->fetch();
+	}
+
 	public function update($data){
 		$id = $data['id'];
 		$name = $data['name'];

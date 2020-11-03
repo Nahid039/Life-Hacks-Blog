@@ -44,6 +44,35 @@ body{
     float: right;
     padding: 5px;
 }
+
+.searchbtn {
+  float: right;
+  margin-top: 18px;
+}
+.searchbtn input[type="text"] {
+  border: 1px solid #A56E0A;
+  width: 200px;
+  background: #F1F1F1;
+  font-size: 18px;
+  height: 30px;
+}
+.searchbtn input[type="submit"] {
+  border: 1px solid #9d6602;
+  border-radius: 3px;
+  font-size: 18px;
+  font-weight: bold;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  cursor: pointer;
+}
+.searchbtn input[type="submit"]:hover{
+	background: #333333 none repeat scroll 0 0;
+	border: 1px solid #e6af4b;
+	color:#fff;
+}
+
 .navsection{
 	//height: 30px;
 	background-color: #6D6E6A;
@@ -82,11 +111,12 @@ body{
 }
 #slider a img{
 	width:100%;
+	margin-bottom: 2px;
 
 }
 .contentsection{
 	//background-image: url("image_1.jpg");
-	background-color: #fff;
+	width: 100%;
 }
 .maincontent{
 	background-color: #A8A8A8;
@@ -95,9 +125,13 @@ body{
 	padding: 10px;
 	width: 65%;
 }
+.samepost{
+	margin-bottom: 30px;
+}
 .samepost h2{
 	padding-bottom: 5px;
     color: #333;
+    font-weight: bold;
     font-size: 26px;
     border-bottom: 2px solid #333;
 }
@@ -105,7 +139,7 @@ body{
 	float: left;
     width: 200px;
     margin-right: 10px;
-    margin-top: 5px;
+    margin-top: -1px;
     padding: 5px;
     border: 0.5px solid;
     background: black;
@@ -123,6 +157,12 @@ body{
     background: #fff;
     float: right;
     border: 1px solid #333;
+}
+/*.panel-body{
+	float: left;
+}*/
+.form-control{
+	width: 450px;
 }
 .sidebar{
 	background-color: #A8A8A8;
@@ -158,11 +198,33 @@ body{
 .samesidebar ul li a:hover{
 	color: red;
 }
-
+.contact td{
+	color: #333333;
+	font-weight: bold;
+}
+.contact input[type="text"],input[type="email"],textarea{
+	width: 450px;
+    padding: 5px;
+    margin: 5px;
+}
+.contact textarea{
+	height: 150px;
+}
+.contact input[type="submit"]{
+	padding: 5px 10px;
+    margin-left: 5px;
+    font-weight: bold;
+    background: #A8A8A8;
+}
+.contact input[type="submit"]:hover{
+	background:#333333;
+	color: #fff;
+}
 .footersection{
 	height: 50px;
 	background-color: #333333;
 	color:white;
+	margin-top: 0px;
 }
 .footersection p{
 	padding-top: 10px;

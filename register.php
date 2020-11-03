@@ -9,7 +9,7 @@
       $user->userRegistration($_POST);
   }
 ?>
-
+<div class="contentsection clear">
     <div class="panel panel-default">
       <div class="panel-heading">
         <h2>User Registration</h2>
@@ -42,7 +42,7 @@
         </form>
     </div>
   </div>
-</body>
+  </div>
 
 <!-- <?php
   include "inc/footer.php";
