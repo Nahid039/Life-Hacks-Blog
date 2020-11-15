@@ -23,7 +23,7 @@ $fm = new Format();
 			<div class="samepost clear">
 				<h2><?php echo $result['title']; ?></h2>
 				<p><?php echo $result['date']; ?><a href=""><?php echo ", Posted by ".$result['author']; ?></a></p>
-				<img src="img/image_1.jpg">
+				<img src="admin/upload/<?php echo $result['image']; ?>">
 				<p><?php echo $fm->textShorten($result['body']); ?></p>
 				<div class="readmore">
 					<a href="post.php?id=<?php echo $result['id']; ?>">Read More</a>
